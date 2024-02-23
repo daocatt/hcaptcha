@@ -1,0 +1,34 @@
+{
+  "name": "gtdxyz/hcaptcha",
+  "description": "Library for hCaptcha.",
+  "type": "library",
+  "keywords": [
+    "hCaptcha",
+    "antispam",
+    "anti-spam",
+    "captcha",
+    "spam",
+    "recaptcha"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daocatt",
+      "email": "daocatt@gtd.xyz"
+    }
+  ],
+  "version": "1.0.0",
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "ext-curl": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "HCaptcha\\": "src/"
+    }
+  }
+}

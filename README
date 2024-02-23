@@ -1,0 +1,15 @@
+## hCaptcha PHP library
+
+Library for hCaptcha.
+
+Uses curl for requests and PHP 7.4+, compatible with any frameworks like Laravel, Yii2, Symfony and etc.
+
+## Installation
+
+```
+composer require gtdxyz/hcaptcha
+```
+
+## How to use
+
+Read guide to know how to use that library
