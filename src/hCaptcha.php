@@ -14,7 +14,7 @@ use HCaptcha\Responses\Response;
  */
 class hCaptcha
 {
-    const VERIFY_URL = 'https://hcaptcha.com/siteverify';
+    const VERIFY_URL = 'https://api.hcaptcha.com/siteverify';
 
     /**
      * Personal hCaptcha secret key

@@ -16,7 +16,7 @@ class CurlRequest implements RequestInterface
      */
     protected $timeout;
 
-    public function __construct($timeout = 5)
+    public function __construct($timeout = 10)
     {
         $this->timeout = $timeout;
     }
@@ -52,10 +52,14 @@ class CurlRequest implements RequestInterface
         $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         $errors = curl_error($ch);
 
+        if(curl_errno($ch)){   
+            $errors = 'Curl error: ' . curl_error($ch);
+        }
+
         curl_close($ch);
 
         if ($statusCode !== 200) {
-            $errors = 'Response status code is ' . $statusCode;
+            $errors = $errors?$errors:'Response status code is ' . $statusCode;
         } elseif ($response !== false) {
             return $response;
         }
